@@ -233,7 +233,7 @@ div.contactInfo {
 
 /* Media Queries! */
 /* iPhone Version */
-@media (max-width:500px) {
+@media screen and (max-width:500px) {
     body {
         margin:0;
     }
@@ -282,12 +282,31 @@ div.contactInfo {
         align-items:center;
         width:90%;
     }
+    section > div {
+        flex-direction:column;
+        align-items:center;
+        width:90%;
+    }
+    section.boxes > div {
+        width:90%;
+    }
+    section.boxes > div > div > div {
+        display:flex;
+        justify-content:center;
+        width:100%;
+        margin:10px 0 0 0;
+        padding:20px;
+        font-size:100%;
+    }
+    section.someFacts > div {
+        width:90%;
+    }
     div.lineOne > div, div.lineTwo > div, div.lineFour > div {
         width:100%;
     }
 }
 /* iPad Version */
-@media (min-width:500px, max-width:800px) {
+@media screen and (min-width:500px) and (max-width:800px) {
     body {
         margin:0 2% 0 2%;
     }
@@ -307,5 +326,19 @@ div.contactInfo {
     }
     section.headingSection > div:last-child {
         display:none;
+    }
+    section.boxes > div {
+        width:100%;
+    }
+    section.boxes > div > div > div {
+        display:flex;
+        justify-content:center;
+        width:100%;
+        margin:10px 0 0 0;
+        padding:20px;
+        font-size:100%;
+    }
+    section.someFacts > div {
+        width:90%;
     }
 }
