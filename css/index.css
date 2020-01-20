@@ -79,7 +79,7 @@ nav {
 	display:flex;
 	justify-content:space-around;
 	flex-wrap:wrap;
-	height:50px;
+    height:50px;
 }
 nav > div:first-child {
 	width:65%;
@@ -172,7 +172,8 @@ div.heading > div:last-child {
 
 div.heading > div:last-child > div {
 	border: 1px solid black;
-	padding:5px 5px 5px 5px;
+    padding:5px 5px 5px 5px;
+    margin-top:20px;
 	width:150px;
 }
 
@@ -228,4 +229,83 @@ div.contactInfo {
 .copyright {
 	text-align:center;
 	margin: 30px 0 30px 0;
+}
+
+/* Media Queries! */
+/* iPhone Version */
+@media (max-width:500px) {
+    body {
+        margin:0;
+    }
+    nav {
+        flex-direction:column;
+        align-items:center;
+        /* background-color:red; */
+        height:380px;
+    }
+    nav > div:first-child {
+        order:2;
+        width:100%;
+    }
+    nav > div:first-child > div {
+        border-top:1px lightgray solid;
+        text-align:center;
+        padding:4.5%;
+        width:100%;
+    }
+    nav > div:first-child > div:last-child {
+        border-bottom:1px lightgray solid;
+    }
+    nav > div:last-child {
+        order:1;
+        width:35%;
+        text-align:center;
+        margin-top:5px;
+    }
+    nav > div {
+        flex-direction:column;
+    }
+    section {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    section.headingSection > div:last-child {
+        display:none;
+    }
+    div.lineOne > div:last-child {
+        margin-top:40px;
+        margin-bottom:20px;
+    }
+    div.lineOne, div.lineTwo, div.lineFour {
+        flex-direction:column;
+        align-items:center;
+        width:90%;
+    }
+    div.lineOne > div, div.lineTwo > div, div.lineFour > div {
+        width:100%;
+    }
+}
+/* iPad Version */
+@media (min-width:500px, max-width:800px) {
+    body {
+        margin:0 2% 0 2%;
+    }
+    nav {
+        flex-direction:column;
+        align-items:center;
+        /* background-color:red; */
+        height:100px;
+    }
+    nav > div:first-child {
+        order:2;
+        width:100%;
+    }
+    nav > div:last-child {
+        order:1;
+        margin-top:10px;
+    }
+    section.headingSection > div:last-child {
+        display:none;
+    }
 }
