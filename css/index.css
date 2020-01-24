@@ -1,3 +1,344 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	/* border:1px solid gray; */
+	box-sizing:border-box;
+	max-width:100%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	margin:0 10% 0 10%;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+ul {
+	list-style-type: circle;
+	list-style-position: inside;
+}
+ul > li {
+	margin:10px 0 10px 0;
+}
+nav {
+	display:flex;
+	justify-content:space-around;
+	flex-wrap:wrap;
+    height:50px;
+}
+nav > div:first-child {
+	width:65%;
+}
+nav > div {
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	flex-wrap:wrap;
+}
+
+div.headerImage {
+	display:flex;
+	justify-content:center;
+	padding: 20px 0 20px 0;
+}
+
+section.boxes {
+	display:flex;
+	border-top: 1px black solid;
+	justify-content:space-around;
+	flex-wrap:wrap;
+	margin: 25px 0 25px 0;
+}
+
+section.boxes > div {
+	background-color:#F5F5F5;
+	border:1px solid lightgray;
+	margin:20px;
+	width:45%;
+}
+
+section.boxes > div > div {
+	margin:10px;
+}
+
+section.someFacts {
+	display:flex;
+	border-top: 1px black solid;
+	padding-top:20px;
+	justify-content:space-between;
+}
+
+section.someFacts > div {
+	width:40%;
+}
+
+div.learnMore {
+	background-color:white;
+	border:1px solid lightgray;
+	border-radius:5px;
+	width:125px;
+	margin:10px;
+	padding:10px;
+	text-align:center;
+	font-size:80%;
+}
+
+section.someFacts > div > p {
+	margin:20px 0 20px 0;
+}
+
+a {
+	color:#A9A9A9;
+	text-decoration:none;
+	font-family:inherit;
+}
+
+a:hover {
+	color:black;
+}
+
+section.headingSection {
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	margin:50px 0 50px 0;
+}
+
+div.heading {
+	display:flex;
+	flex-direction:column;
+	text-align:center;
+}
+
+div.heading > div:last-child {
+	display:flex;
+	justify-content:center;
+}
+
+div.heading > div:last-child > div {
+	border: 1px solid black;
+    padding:5px 5px 5px 5px;
+    margin-top:20px;
+	width:150px;
+}
+
+h1 {
+	font-size: 400%;
+	margin-bottom:0px;
+}
+
+h3 {
+	font-size:90%;
+}
+
+div.lineOne, div.lineThree, div.lineFour {
+	border-top: 1px black solid;
+	padding-top:50px;
+	width:100%;
+}
+
+div.lineOne {
+	display:flex;
+	justify-content:space-between;
+}
+
+div.lineOne > div {
+	display:flex;
+	flex-direction:column;
+	width:48%
+}
+
+div.imgDiv {
+	display:flex;
+	justify-content:center;
+	width:100%;
+	padding:20px;
+}
+
+div.lineTwo {
+	display:flex;
+	justify-content:space-between;
+}
+
+div.lineTwo > div {
+	display:flex;
+	flex-direction:column;
+	width:30%;
+	margin-bottom:50px;
+}
+
+div.contactInfo {
+	margin-bottom:20px;
+}
+
+.copyright {
+	text-align:center;
+	margin: 30px 0 30px 0;
+}
+
+/* Media Queries! */
+/* iPhone Version */
+@media screen and (max-width:500px) {
+    body {
+        margin:0;
+    }
+    nav {
+        flex-direction:column;
+        align-items:center;
+        /* background-color:red; */
+        height:380px;
+    }
+    nav > div:first-child {
+        order:2;
+        width:100%;
+    }
+    nav > div:first-child > div {
+        border-top:1px lightgray solid;
+        text-align:center;
+        padding:4.5%;
+        width:100%;
+    }
+    nav > div:first-child > div:last-child {
+        border-bottom:1px lightgray solid;
+    }
+    nav > div:last-child {
+        order:1;
+        width:35%;
+        text-align:center;
+        margin-top:5px;
+    }
+    nav > div {
+        flex-direction:column;
+    }
+    section {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    section.headingSection > div:last-child {
+        display:none;
+    }
+    div.lineOne > div:last-child {
+        margin-top:40px;
+        margin-bottom:20px;
+    }
+    div.lineOne, div.lineTwo, div.lineFour {
+        flex-direction:column;
+        align-items:center;
+        width:90%;
+    }
+    section > div {
+        flex-direction:column;
+        align-items:center;
+        width:90%;
+    }
+    section.boxes > div {
+        width:90%;
+    }
+    section.boxes > div > div > div {
+        display:flex;
+        justify-content:center;
+        width:100%;
+        margin:10px 0 0 0;
+        padding:20px;
+        font-size:100%;
+    }
+    section.someFacts > div {
+        width:90%;
+    }
+    div.lineOne > div, div.lineTwo > div, div.lineFour > div {
+        width:100%;
+    }
+}
+/* iPad Version */
+@media screen and (min-width:500px) and (max-width:800px) {
+    body {
+        margin:0 2% 0 2%;
+    }
+    nav {
+        flex-direction:column;
+        align-items:center;
+        /* background-color:red; */
+        height:100px;
+    }
+    nav > div:first-child {
+        order:2;
+        width:100%;
+    }
+    nav > div:last-child {
+        order:1;
+        margin-top:10px;
+    }
+    section.headingSection > div:last-child {
+        display:none;
+    }
+    section.boxes > div {
+        width:100%;
+    }
+    section.boxes > div > div > div {
+        display:flex;
+        justify-content:center;
+        width:100%;
+        margin:10px 0 0 0;
+        padding:20px;
+        font-size:100%;
+    }
+    section.someFacts > div {
+        width:90%;
+    }
+}
